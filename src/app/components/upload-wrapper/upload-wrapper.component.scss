@@ -1,0 +1,37 @@
+.upload-container {
+    background-color: var(--surface-200);
+    padding: 50px;
+    margin: 100px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .upload-header {
+        font-size: 30px;
+    }
+
+    .p-float-label {
+        margin: 15px;
+        .p-inputtext {
+            border-radius: 5px;
+            background-color: var(--surface-500);
+        }
+
+    }
+
+    .p-dropdown {
+        border-radius: 5px;
+        background-color: var(--surface-500);
+    }
+    
+    .file-details-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .uploader {
+        margin: 20px;
+    }
+}
