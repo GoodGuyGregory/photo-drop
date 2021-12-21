@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { File } from '../../File';
-import { FileType } from '../../FileType';
 
 @Component({
   selector: 'app-upload-wrapper',
@@ -13,20 +12,24 @@ import { FileType } from '../../FileType';
 export class UploadWrapperComponent implements OnInit {
 
   public myFile: File[] = [];
-  public fileTypes: FileType[];
-  public selectedFile: FileType;
+  public fileName: string;
+  public fileToUpload: File;
 
-  constructor() {
-  }
+  constructor() { }
+
 
 
   ngOnInit(): void {
-
-    this.fileTypes = [
-      { name: 'JPG', code: '.jpg' },
-      { name: 'PNG', code: '.png' },
-      { name: 'HEIC', code: 'heic' },
-    ];
   }
 
+  selectFile(file: File[]): void {
+    this.fileToUpload = file[0];
+  }
+
+  submitFile(): void {
+    // call API service to name the file and send it off
+    console.log(this.myFile);
+    console.log(this.fileToUpload);
+    console.log(this.fileName);
+  }
 }

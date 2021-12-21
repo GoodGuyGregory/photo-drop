@@ -31,7 +31,13 @@
         flex-direction: row;
     }
 
-    .uploader {
-        margin: 20px;
+    .form-group {
+        display: flex;
+        margin: 1em;
+        flex-direction: column;
+        
+        .submit-button {
+            margin-top: 25px;
+        }
     }
 }

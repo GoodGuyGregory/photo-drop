@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { UploadWrapperComponent } from './components/upload-wrapper/upload-wrapper.component';
 import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,11 @@ import { DropdownModule } from 'primeng/dropdown';
     AppRoutingModule,
     FormsModule,
     FileUploadModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     InputTextModule,
-    DropdownModule
+    ButtonModule
 
   ],
   providers: [],
