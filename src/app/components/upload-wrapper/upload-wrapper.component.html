@@ -1,16 +1,16 @@
 <div class="upload-container">
     <h3 class="upload-header">upload your favorite images</h3>
     <!-- Form For Uploading -->
-    <p-fileUpload class="uploader" [showUploadButton]="false" name="myfile[]" url="./upload.php"
+    <p-fileUpload class="uploader" [showUploadButton]="false" name="myPhoto[]" url="./upload.php"
         (onSelect)="selectFile($event.currentFiles)"></p-fileUpload>
     <div class="form-group">
         <span class="p-float-label">
-            <input id="float-input" [(ngModel)]="fileName" type="text" pInputText>
-            <label for="float-input">Filename</label>
+            <input id="float-input" [(ngModel)]="photoName" type="text" pInputText>
+            <label for="float-input">Photo name</label>
         </span>
         <button pButton type="button" class="p-button-raised submit-button" (click)="submitFile()">Submit</button>
 
-        {{this.fileToUpload}}
-        {{this.fileName}}
+        {{this.photoToUpload}}
+        {{this.photoName}}
     </div>
 </div>

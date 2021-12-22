@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { File } from '../../File';
+import { Photo } from '../../Photo';
 
 @Component({
   selector: 'app-upload-wrapper',
@@ -11,9 +11,9 @@ import { File } from '../../File';
 
 export class UploadWrapperComponent implements OnInit {
 
-  public myFile: File[] = [];
-  public fileName: string;
-  public fileToUpload: File;
+  public myPhoto: Photo[] = [];
+  public photoName: string;
+  public photoToUpload: File;
 
   constructor() { }
 
@@ -23,13 +23,13 @@ export class UploadWrapperComponent implements OnInit {
   }
 
   selectFile(file: File[]): void {
-    this.fileToUpload = file[0];
+    this.photoToUpload = file[0];
   }
 
   submitFile(): void {
     // call API service to name the file and send it off
-    console.log(this.myFile);
-    console.log(this.fileToUpload);
-    console.log(this.fileName);
+    console.log(this.myPhoto);
+    console.log(this.photoToUpload);
+    console.log(this.photoName);
   }
 }
